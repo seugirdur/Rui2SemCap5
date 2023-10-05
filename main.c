@@ -1,13 +1,14 @@
 #include <stdio.h>
-#define ex52
+
+#define ex55
 
 #ifdef ex51
 /*1 - Receba 2 string de ate 10 caracteres via teclado na funcao main(). Faça uma
     funcao para compara-las e retorne como resultado se são IGUAIS 1 ou se
     DIFERENTES 0 para a funcao main(). Imprima o resultado na funcao main().
     (Declare os vetores como variavel global) (nao pode usar funcao de biblioteca)*/
-char string1[11]; // Vetor para a primeira string (até 10 caracteres + terminador nulo)
-char string2[11]; // Vetor para a segunda string (até 10 caracteres + terminador nulo)
+char string1[11];
+char string2[11];
 
 int compareStrings() {
     int i = 0;
@@ -125,8 +126,82 @@ int main() {
 
     printf("O comprimento da string é: %d\n", comprimento);
 
+    printf("\nDigite X para sair  \n");
+    char saida;
+    while(saida != 'X' && saida != 'x')
+    {
+        scanf(" %c", &saida);
+
+        if(saida != 'X' && saida != 'x') {
+            printf("Erro, digite novamente  \n");
+        }
+    }
+
     return 0;
 }
 
+
+#endif
+
+#ifdef ex54
+
+int main() {
+    char str[11];
+    printf("Digite uma cadeia de caracteres (10): ");
+    scanf("%10s", str);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+
+            str[i] = str[i] - 32;
+        }
+    }
+
+    printf("Cadeia de caracteres em letras maiúsculas: %s\n", str);
+
+    printf("\nDigite X para sair  \n");
+    char saida;
+    while(saida != 'X' && saida != 'x')
+    {
+        scanf(" %c", &saida);
+
+        if(saida != 'X' && saida != 'x') {
+            printf("Erro, digite novamente  \n");
+        }
+    }
+
+    return 0;
+}
+#endif
+
+#ifdef ex55
+
+
+int main() {
+    char str[11];
+    printf("Digite uma cadeia de caracteres (10): ");
+    scanf("%10s", str);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Cadeia de caracteres em letras minúsculas: %s\n", str);
+
+    printf("\nDigite X para sair  \n");
+    char saida;
+    while (saida != 'X' && saida != 'x') {
+        scanf(" %c", &saida);
+
+        if (saida != 'X' && saida != 'x') {
+            printf("Erro, digite novamente  \n");
+        }
+    }
+
+    return 0;
+}
 
 #endif
